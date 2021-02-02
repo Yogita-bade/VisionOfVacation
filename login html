@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+<script>
+</script>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		
+		$('#changeTextBoxColor').click(function(){
+			 	
+				if($("#name").val().length != 0) {
+				$('#name').css("background-color","yellow");
+			    }
+			
+				if($("#address").val().length != 0) {
+				$('#address').css("background-color","yellow");
+			}
+						if($("#age").val().length != 0) {
+				$('#age').css("background-color","yellow");
+			}
+						if($("#dependents").val().length != 0) {
+				$('#dependents').css("background-color","yellow");
+			}
+			
+		});
+
+		$('#addElement').click(function(){
+			$("#emptable").append("<tr><td>"+$("#name").val()+"</td><td>"+$("#address").val()+"</td><td>"+$("#age").val()+"</td><td>"+$("#dependents").val()+"</td></tr>");
+		});
+
+		$('#changeBackgroundColor').click(function(){
+			$("#emptable").css("background-color","cyan");
+		});		
+
+	});
+	
+</script>
+
+</head>
+
+<body>
+
+Name:<input type="text" id="name" name="name"></br>
+Address:<input type="text"  id="address" name="Address"></br>
+Age:<input type="text" id="age" name="Age"></br>
+No of dependents:<input type="text" id="dependents"  name="nod"></br>
+
+<table style="float: right;
+    margin-right: 50%;
+    margin-top: -85px;
+}"id="emptable">
+<tr>
+<th>Name</th>
+<th>Address</th>
+<th>Age</th>
+<th>No. Of Dependents</th>
+</tr>
+</table>
+
+<button type="button" name="btn1" id="changeTextBoxColor">Color Change</button>
+<button type="button" name="btn2" id="addElement">Add Element</button>
+<button type="button" name="btn3" id="changeBackgroundColor">Change Backgroundd</button>
+
+
+
+</body>
+
+</html>
